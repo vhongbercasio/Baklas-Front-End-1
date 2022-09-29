@@ -1,0 +1,735 @@
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+/* RESET CSS END */
+
+
+/* CUSTOMIZE STYLE YOUR OWN VARIABLES */
+:root {
+    --color-primary: #13331b;
+    --color-succesful: #0b8c2b;
+    --color--warning: #eba613;
+    --color-danger: #d9320d;
+    ---color-danger-vcariant: rgba(84, 21, 8);
+    --color-white: white;
+    --color-black: black;
+    --color-bg: #134003;
+    --color-b1: #5ae329;
+    --color-b2: #0a8a5f;
+    --color-b3: #175207;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+
+}
+
+/* CUSTOMIZE STYLE YOUR OWN VARIABLES END */
+
+
+
+/* ===== DEFAULT STYLE OR GENERAL STYLE ======== */
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-bg);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+
+}
+
+h3 {
+    font-size: 1rem;
+
+}
+
+a {
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-danger);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-primary {
+    background: var(--color--danger);
+    color: var(--color-white);
+
+}
+
+/* ===== DEFAULT STYLE OR GENERAL STYLE END =====  */
+
+
+
+
+/* ===== NAVBAR STYLE =====  */
+
+nav {
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background: var(--color-b1);
+}
+
+
+/* change navbar style on scroll using javascript */
+.window-scroll {
+    background: var(--color--warning);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.nav__container {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav__menu a {
+    font-size: 1rem;
+    transition: var(--transition);
+
+}
+
+nav button {
+    display: none;
+}
+
+
+.nav__menu a:hover {
+    color: var(--color-b2)
+}
+
+
+
+/* ===== NAVBAR STYLE END =====  */
+
+
+
+/* ===== HEADER STYLE  =====  */
+
+header {
+    position: relative;
+    top: 6rem;
+    overflow: hiden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+.header__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header__left p {
+    margin: 2rem 0 2.4rem;
+}
+
+/* ===== HEADER STYLE END =====  */
+
+/* ===== CATEGOREIS STYLE =====  */
+.categories {
+    background: var(--color-bg1);
+    height: 100vh;
+}
+
+.categories h1 {
+    line-height: 2;
+    margin-bottom: 5rem;
+}
+
+.categories__container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+    top: 5rem;
+}
+
+.categories__left {
+    margin-left: 2rem;
+
+}
+
+.categories__left p {
+    margin: 1rem 0 3rem;
+}
+
+.categories__right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.category {
+    background: var(--color-b2);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.category:hover {
+    background: var(--color-primary);
+    z-index: 0;
+}
+
+.category_icon {
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+}
+
+
+
+.category:nth-child(2) .category_icon {
+    background: var(--color-danger);
+}
+
+.category:nth-child(3) .category_icon {
+    background: var(--color-succesful);
+}
+
+.category:nth-child(4) .category_icon {
+    background: var(--color--warning);
+}
+
+.category:nth-child(5) .category_icon {
+    background: var(--color--succesful);
+}
+
+
+.category p {
+    font-size: 0.85rem;
+}
+
+/* ===== CATEGOREIS STYLE END=====  */
+
+
+/* ===== COURSE STYLE =====  */
+
+.courses {
+    background: var(--color-b3);
+    margin-top: 2rem;
+}
+
+.courses_container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-b2);
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.course__info {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+/* ===== COURSE STYLE END=====  */
+
+
+
+
+/* ===== FAQ START=====  */
+
+
+.faqs {
+    background-color: var(--color-bg);
+    box-shadow: inset 0 1px 0 rgb(113, 112, 112);
+}
+
+.faqs__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.faq__icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+.faq p {
+    margin-top: 0.8rem;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+}
+
+/* ===== FAQ START END=====  */
+
+
+
+/* ===== TESTIMONNIAL =====  */
+
+.testimonial__container {
+    overflow-x: hidden;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 0;
+
+}
+
+.testimonial {
+    padding: 2rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 6rem;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 0.4rem solid var(--color-b1);
+}
+
+.testimonial__info {
+    text-align: center;
+
+}
+
+.testimonial__body {
+    background: var(--color-primary);
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.testimonial__body::before {
+    content: " ";
+    display: block;
+    /* MAKING TRIANGLE */
+    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+
+/* ===== TESTIMONNIAL END=====  */
+
+
+
+/* ===== FOOTER =====  */
+
+.footer {
+    background: var(--color-b3);
+    padding-top: 5rem;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer__container h4 {
+    margin-bottom: 1.2rem;
+}
+
+/* .footer__1 {
+    background: pink;
+} */
+
+.footer__1 p {
+    margin: 0 0 2rem;
+}
+
+footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer__copyringht {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 3px solid var(--color-b2);
+}
+
+/* ===== FOOTER END =====  */
+
+
+
+
+/* ============== MEDIA QUERY (TABLET) =============== */
+
+@media screen and (max-width: 1024px) {
+
+    /* GENERAL CUSTOMIZE OF TABLET WIDTH */
+    .container {
+        width: var(--container-width-md);
+
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+
+    }
+
+    /* GENERAL CUSTOMIZE OF TABLET WIDTH END */
+
+    /* ==== NAVBAR width:1024  */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+        border: none;
+
+
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        width: 18rem;
+        height: fit-content;
+        display: grid;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav__menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: animatedNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+
+    }
+
+    .nav__menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+
+    .nav__menu li:nth-child(3) {
+        animation-delay: 300ms;
+    }
+
+    .nav__menu li:nth-child(4) {
+        animation-delay: 400ms;
+    }
+
+
+    @keyframes animatedNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+
+        100% {
+            transform: rotateZ(0) scale(1);
+            opacity: 2;
+        }
+
+    }
+
+    .nav__menu li a {
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+
+    }
+
+    .nav__menu li a:hover {
+        background: var(--color-b3);
+        color: var(--color-white);
+    }
+
+
+
+
+    /* ==== NAVBAR width:1024 END ======= */
+
+
+    /* ==== HEADER width: 1024 ==== */
+
+    header {
+        height: 58vh;
+        margin-bottom: 4rem;
+
+    }
+
+    .header__container {
+        gap: 1.5;
+        padding-bottom: 3rem;
+    }
+
+
+
+    /* ==== HEADER width: 1024 END ======= */
+
+
+
+    /* ==== CATEGORIES width: 1024 ======= */
+    .categories {
+        height: auto;
+    }
+
+    .categories__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories__left {
+        margin-top: 0;
+    }
+
+    /* ==== CATEGORIES width: 1024 END ======= */
+
+    /* ==== COURSE width: 1024  ======= */
+    .courses {
+        margin-top: 0;
+
+    }
+
+    .courses_container {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+    }
+
+    /* ==== COURSE width: 1024 END ======= */
+
+    /* ==== FAQ width: 1024  ======= */
+    .faqs__container {
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    /* ==== FAQ width: 1024 END ======= */
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+}
+
+/* ============== MEDIA QUERY (TABLET) END =============== */
+
+
+
+/* ============== MEDIA QUERY (PHONE)  =============== */
+
+@media screen and (max-width: 600px) {
+
+    /* NAV PHONE */
+    .container {
+        width: var(--container-width-sm);
+
+    }
+
+    .nav__menu {
+        right: 3%;
+    }
+
+
+
+    /* NAV PHONE END */
+
+
+
+    /* HEADER PHONE */
+    header {
+
+        height: 100vh;
+    }
+
+    .header__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        text-align: center;
+        gap: 0;
+    }
+
+    /* HEADER PHONE END */
+
+    .categories__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category {
+        margin-top: 4px;
+        border-radius: 1rem;
+
+    }
+
+    .category_icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    .courses_container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    /* TESTIMONIAL WIDTH PHONE */
+    .testimonial__container {
+        margin-top: 0;
+
+        padding-top: 2rem;
+
+    }
+
+    .testimonial__body {
+        padding: 1.2rem;
+    }
+
+    /* TESTIMONIAL WIDTH PHONE END */
+
+    /* FOOTER WIDTH PHONE */
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer__social {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* FOOTER WIDTH PHONE END */
+
+}
+
+
+/* ============== MEDIA QUERY (PHONE) END =============== */
